@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import fuelSavings from './fuelSavingsReducer';
+import { visibilityFilter } from './visibilityFilter';
+import { todos } from './todos';
 
 const rootReducer = combineReducers({
-  fuelSavings
+  visibilityFilter,
+  todos
 });
 
 export default rootReducer;
