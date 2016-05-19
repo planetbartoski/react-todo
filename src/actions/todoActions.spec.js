@@ -1,5 +1,5 @@
-import React from 'react';
-import { expect } from 'chai';
+//import React from 'react';
+import { expect, should } from 'chai'; should();
 import * as ActionCreators from './todoActions';
 import * as ActionTypes from '../constants/actionTypes';
 import VisibilityFilter from '../constants/VisibilityFilter';
@@ -8,19 +8,19 @@ describe('todoActions', function() {
   const appState = {
   };
 
-  it('should create an action to add new todo item', function() {
-    const newTodoItem = 'new todo item';
+  it('addTodo should create an action to add new todo item', function() {
+    const text = 'new todo item';
 
     const expected = {
-      id: 0,
       type: ActionTypes.ADD_TODO,
-      text: newTodoItem
+      id: 0,
+      text: text
     };
 
-    expect(ActionCreators.addTodo(newTodoItem)).to.deep.equal(expected);
+    ActionCreators.addTodo(text).should.deep.equal(expected);
   });
 
-  it('should create an action to toggle a todo item', function() {
+  it('toggleTodo should create an action to toggle a todo item', function() {
     const id = 0;
 
     const expected = {
@@ -28,10 +28,10 @@ describe('todoActions', function() {
       id: id
     };
 
-    expect(ActionCreators.toggleTodo(id)).to.deep.equal(expected);
+    ActionCreators.toggleTodo(id).should.deep.equal(expected);
   });
 
-  it('should create an action to set the visibility filter', function() {
+  it('setVisibilityFilter should create an action to set the visibility filter', function() {
     const filter = VisibilityFilter.SHOW_COMPLETED;
 
     const expected = {
@@ -39,7 +39,7 @@ describe('todoActions', function() {
       filter: filter
     };
 
-    expect(ActionCreators.setVisibilityFilter(filter)).to.deep.equal(expected);
+    ActionCreators.setVisibilityFilter(filter).should.deep.equal(expected);
   });
 
 });
