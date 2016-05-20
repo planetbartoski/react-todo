@@ -1,5 +1,4 @@
 import {ADD_TODO, TOGGLE_TODO} from '../constants/actionTypes';
-import objectAssign from 'object-assign';
 
 export const initialState = [];
 

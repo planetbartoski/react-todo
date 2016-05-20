@@ -5,21 +5,21 @@ import sinon from 'sinon';
 import Link from './Link';
 
 
-describe('<Link />', () => {
+describe('<Link />', function() {
   const active = true;
   const children = '<p>aa</p>';
   const onClick = () => true;
 
-	it('contains children', () => {
+	it('contains children', function() {
     const wrapper = shallow(<Link
                               active={active} 
                               children={children} 
                               onClick={onClick}
                             />);
-    wrapper.text().should.equal(children);
+    wrapper.text().should.deep.equal(children);
 	});
 
-  it('non-active link is clickable', () => {
+  it('non-active link is clickable', function() {
     const onClickSpy = sinon.spy();
     const wrapper = shallow(<Link
                               active={false} 
@@ -32,7 +32,7 @@ describe('<Link />', () => {
     onClickSpy.calledOnce.should.be.true;
   });
 
-  it('active link is not clickable', () => {
+  it('active link is not clickable', function() {
     const wrapper = shallow(<Link
                               active={true} 
                               children={children} 

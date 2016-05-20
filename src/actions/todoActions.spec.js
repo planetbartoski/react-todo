@@ -10,23 +10,24 @@ describe('todoActions', function() {
     const text = 'new todo item';
     const action = ActionCreators.addTodo(text);
 
-    action.type.should.equal(ActionTypes.ADD_TODO);
-    action.text.should.equal(text);
+    action.should.have.property('type').that.equals(ActionTypes.ADD_TODO);
+    action.should.have.property('id').that.be.an('number');
+    action.should.have.property('text').that.equals(text);
   });
 
   it('toggleTodo should create an action to toggle a todo item', function() {
     const id = 0;
     const action = ActionCreators.toggleTodo(id);
 
-    action.type.should.equal(ActionTypes.TOGGLE_TODO);
-    action.id.should.equal(id);
+    action.should.have.property('type').that.equals(ActionTypes.TOGGLE_TODO);
+    action.should.have.property('id').that.equals(id);
   });
 
   it('setVisibilityFilter should create an action to set the visibility filter', function() {
     const filter = VisibilityFilter.SHOW_COMPLETED;
     const action = ActionCreators.setVisibilityFilter(filter);
 
-    action.type.should.equal(ActionTypes.SET_VISIBILITY_FILTER);
-    action.filter.should.equal(filter);
+    action.should.have.property('type').that.equals(ActionTypes.SET_VISIBILITY_FILTER);
+    action.should.have.property('filter').that.equals(filter);
   });
 });

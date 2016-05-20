@@ -1,12 +1,11 @@
-import React from 'react';
 import { should } from 'chai'; should();
 import sinon from 'sinon';
 import { mapStateToProps, mapDispatchToProps} from './VisibleTodoList';
 import VisibilityFilter from '../constants/VisibilityFilter';
-import { setVisibilityFilter, toggleTodo } from '../actions/todoActions';
+import { toggleTodo } from '../actions/todoActions';
 
 
-describe('<VisibleTodoList mapStateToProps />', () => {
+describe('<VisibleTodoList mapStateToProps />', function() {
   const todos = [{
     id: 0,
     completed: false,
@@ -44,9 +43,9 @@ describe('<VisibleTodoList mapStateToProps />', () => {
   });
 });
 
-describe('<VisibleTodoList mapDispatchToProps />', () => {
+describe('<VisibleTodoList mapDispatchToProps />', function() {
 
-  it('onClick passes action to dispatch', () => {
+  it('onClick passes action to dispatch', function() {
     const onClickSpy = sinon.spy();
     const id = 0;
     

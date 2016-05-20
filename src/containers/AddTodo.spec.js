@@ -1,28 +1,43 @@
+import '../tools/testMount';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { should } from 'chai'; should();
 import sinon from 'sinon';
 import { AddTodo } from './AddTodo';
-import { addTodo } from '../actions/todoActions';
+import * as actionTypes from '../constants/actionTypes';
 
 
-describe('AddTodo', () => {
+describe('<AddTodo />', () => {
 	
   it('has input field', () => {
-    const onClickSpy = sinon.spy();
     const wrapper = shallow(<AddTodo
-                            dispatch={onClickSpy}
+                            dispatch={()=>{}}
                           />);
     wrapper.find('input').should.have.length(1);
 	});
 
-  it('button dispatches an action', () => {
+  it('dont allow to submit empty form', () => {
     const onClickSpy = sinon.spy();
     const wrapper = shallow(<AddTodo
                             dispatch={onClickSpy}
                           />);
-    wrapper.find('button').simulate('click');
-    onClickSpy.calledOnce.should.be.true;
+    wrapper.find('form').simulate('submit');
+    onClickSpy.calledOnce.should.be.false;
+  });
+
+  it('form submit dispatches apprioprate action', () => {
+    const onClickSpy = sinon.spy();
+    const text = 'new todo item';
+    const wrapper = mount(<AddTodo
+                            dispatch={onClickSpy}
+                          />);
+    wrapper.find('input').node.value = text;
+    wrapper.find('form').simulate('submit');
+
+    let action = onClickSpy.getCall(0).args[0];
+    action.should.have.property('type').that.equals(actionTypes.ADD_TODO);
+    action.should.have.property('id').that.be.an('number');
+    action.should.have.property('text').that.be.equals(text);
   });
 
 });

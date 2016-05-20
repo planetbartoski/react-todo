@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
 import { should } from 'chai'; should();
-import sinon from 'sinon';
 import TodoList from './TodoList';
 
 
-describe('<TodoList />', () => {
+describe('<TodoList />', function() {
   const todos = [{
     id: 0,
     completed: false,
@@ -22,7 +21,7 @@ describe('<TodoList />', () => {
 
   const onTodoClick = () => true;
 
-	it('is a list element', () => {
+	it('is a list element', function() {
     const wrapper = shallow(<TodoList
                               todos = {todos} 
                               onTodoClick={onTodoClick}
@@ -31,7 +30,7 @@ describe('<TodoList />', () => {
     wrapper.is('ul').should.be.true;
 	});
 
-  it('contains all Todos', () => {
+  it('contains all Todos', function() {
     const wrapper = render(<TodoList
                               todos = {todos} 
                               onTodoClick={onTodoClick}
