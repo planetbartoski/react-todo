@@ -1,26 +1,19 @@
-import React from 'react';
-import { expect } from 'chai';
+import { should } from 'chai'; should();
 import * as ActionTypes from '../constants/actionTypes';
 import VisibilityFilter from '../constants/VisibilityFilter';
 import { initialState, visibilityFilter } from './visibilityFilter';
 
 describe('Reducers::visibilityFilter', function() {
 
-  const getAppState = () => {
-    return VisibilityFilter.SHOW_ALL;
-  };
-
   it('should set initial state by default', function() {
     const action = { type: 'unknown' };
-    const expected = initialState;
 
-    expect(visibilityFilter(undefined, action)).to.deep.equal(expected);
+    visibilityFilter(undefined, action).should.deep.equal(initialState);
   });
 
   it('should handle SET_VISIBILITY_FILTER', function() {
-    const action = { type: ActionTypes.SET_VISIBILITY_FILTER, filter: visibilityFilter.SHOW_COMPLETED };
-    const expected = action.filter;
+    const action = { type: ActionTypes.SET_VISIBILITY_FILTER, filter: VisibilityFilter.SHOW_COMPLETED };
 
-    expect(visibilityFilter(initialState, action)).to.deep.equal(expected);
+    visibilityFilter(initialState, action).should.deep.equal(action.filter);
   });
 });

@@ -1,6 +1,5 @@
 import { SET_VISIBILITY_FILTER } from '../constants/actionTypes';
 import VisibilityFilter from '../constants/VisibilityFilter';
-import objectAssign from 'object-assign';
 
 export const initialState = VisibilityFilter.SHOW_ALL;
 
