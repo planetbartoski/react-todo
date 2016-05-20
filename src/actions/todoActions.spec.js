@@ -1,45 +1,32 @@
 //import React from 'react';
-import { expect, should } from 'chai'; should();
+import { should } from 'chai'; should();
 import * as ActionCreators from './todoActions';
 import * as ActionTypes from '../constants/actionTypes';
 import VisibilityFilter from '../constants/VisibilityFilter';
 
 describe('todoActions', function() {
-  const appState = {
-  };
 
   it('addTodo should create an action to add new todo item', function() {
     const text = 'new todo item';
+    const action = ActionCreators.addTodo(text);
 
-    const expected = {
-      type: ActionTypes.ADD_TODO,
-      id: 0,
-      text: text
-    };
-
-    ActionCreators.addTodo(text).should.deep.equal(expected);
+    action.type.should.equal(ActionTypes.ADD_TODO);
+    action.text.should.equal(text);
   });
 
   it('toggleTodo should create an action to toggle a todo item', function() {
     const id = 0;
+    const action = ActionCreators.toggleTodo(id);
 
-    const expected = {
-      type: ActionTypes.TOGGLE_TODO,
-      id: id
-    };
-
-    ActionCreators.toggleTodo(id).should.deep.equal(expected);
+    action.type.should.equal(ActionTypes.TOGGLE_TODO);
+    action.id.should.equal(id);
   });
 
   it('setVisibilityFilter should create an action to set the visibility filter', function() {
     const filter = VisibilityFilter.SHOW_COMPLETED;
+    const action = ActionCreators.setVisibilityFilter(filter);
 
-    const expected = {
-      type: ActionTypes.SET_VISIBILITY_FILTER,
-      filter: filter
-    };
-
-    ActionCreators.setVisibilityFilter(filter).should.deep.equal(expected);
+    action.type.should.equal(ActionTypes.SET_VISIBILITY_FILTER);
+    action.filter.should.equal(filter);
   });
-
 });

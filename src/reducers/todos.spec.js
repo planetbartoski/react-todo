@@ -1,6 +1,4 @@
-import React from 'react';
 import { should } from 'chai'; should();
-import * as ActionTypes from '../constants/actionTypes';
 import { initialState, todos } from './todos';
 import { addTodo, toggleTodo } from '../actions/todoActions';
 
