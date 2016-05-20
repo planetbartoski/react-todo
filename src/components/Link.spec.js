@@ -16,7 +16,7 @@ describe('<Link />', function() {
                               children={children} 
                               onClick={onClick}
                             />);
-    wrapper.text().should.deep.equal(children);
+    wrapper.text().should.equal(children);
 	});
 
   it('non-active link is clickable', function() {

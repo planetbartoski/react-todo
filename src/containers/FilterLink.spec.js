@@ -8,9 +8,10 @@ import { setVisibilityFilter } from '../actions/todoActions';
 describe('<FilterLink mapStateToProps />', function() {
 	
   it('same state and ownProps filter makes it active', function() {
-    mapStateToProps({visibilityFilter: VisibilityFilter.SHOW_ALL},
-                    {filter: VisibilityFilter.SHOW_ALL}
-                    ).active.should.be.true;
+    mapStateToProps(
+      {visibilityFilter: VisibilityFilter.SHOW_ALL},
+      {filter: VisibilityFilter.SHOW_ALL}
+    ).should.have.property('active').that.be.true;
 	});
 });
 
