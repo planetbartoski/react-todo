@@ -8,6 +8,6 @@ describe('<Footer />', function() {
 
 	it('is Footer', function() {
     const wrapper = shallow(<Footer/>);
-    wrapper.is('Footer').should.be.true;
+    wrapper.is('footer').should.be.true;
 	});
 });
