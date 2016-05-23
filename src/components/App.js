@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import Footer from './Footer';
-import TodoPage from '../components/TodoPage';
 
 const App = (props) => (
   <div>
