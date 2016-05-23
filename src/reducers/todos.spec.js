@@ -1,5 +1,5 @@
 import { should } from 'chai'; should();
-import { initialState, todos } from './todos';
+import { todos, initialState } from './todos';
 import { addTodo, toggleTodo } from '../actions/todoActions';
 
 

@@ -1,7 +1,7 @@
 import { should } from 'chai'; should();
 import * as ActionTypes from '../constants/actionTypes';
 import VisibilityFilter from '../constants/VisibilityFilter';
-import { initialState, visibilityFilter } from './visibilityFilter';
+import { visibilityFilter, initialState } from './visibilityFilter';
 
 describe('Reducers::visibilityFilter', function() {
 

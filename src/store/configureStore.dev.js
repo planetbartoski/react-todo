@@ -3,10 +3,10 @@
 //With Redux, the actual stores are in /reducers.
 
 import { createStore, compose } from 'redux';
-import rootReducer from '../reducers';
+import rootReducer, { initialState } from '../reducers';
 
-export default function configureStore(initialState) {
-  let store = createStore(rootReducer, initialState, compose(
+export default function configureStore(initialStateLocal = initialState) {
+  let store = createStore(rootReducer, initialStateLocal, compose(
     // Add other middleware on this line...
     window.devToolsExtension ? window.devToolsExtension() : f => f //add support for Redux dev tools
     )
