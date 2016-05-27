@@ -1,21 +1,21 @@
 import { should } from 'chai'; should();
 import sinon from 'sinon';
-import { mapStateToProps, mapDispatchToProps} from './FilterLink';
+import { mapStateToProps, mapDispatchToProps} from './FilterButton';
 import VisibilityFilter from '../constants/VisibilityFilter';
 import { setVisibilityFilter } from '../actions/todoActions';
 
 
-describe('<FilterLink mapStateToProps />', function() {
+describe('<FilterButton mapStateToProps />', function() {
 	
-  it('same state and ownProps filter makes it active', function() {
+  it('same state and ownProps filter makes it disable', function() {
     mapStateToProps(
       {visibilityFilter: VisibilityFilter.SHOW_ALL},
       {filter: VisibilityFilter.SHOW_ALL}
-    ).should.have.property('active').that.be.true;
+    ).should.have.property('disabled').that.be.true;
 	});
 });
 
-describe('<FilterLink mapDispatchToProps />', function() {
+describe('<FilterButton mapDispatchToProps />', function() {
 
   it('onClick passes action to dispatch', function() {
     const onClickSpy = sinon.spy();

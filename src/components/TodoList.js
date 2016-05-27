@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react';
 import Todo from './Todo';
 
+/**
+ * List of the Todo items
+ */
 const TodoList = ({ todos, onTodoClick }) => (
   <ul>
     {todos.map(todo =>
