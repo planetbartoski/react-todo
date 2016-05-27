@@ -13,7 +13,7 @@ describe('<AddTodo />', () => {
     const wrapper = shallow(<AddTodo
                             dispatch={()=>{}}
                           />);
-    wrapper.find('input').should.have.length(1);
+    wrapper.find('FormControl').should.have.length(1);
 	});
 
   it('dont allow to submit empty form', () => {
@@ -21,7 +21,7 @@ describe('<AddTodo />', () => {
     const wrapper = shallow(<AddTodo
                             dispatch={onClickSpy}
                           />);
-    wrapper.find('form').simulate('submit');
+    wrapper.find('Form').simulate('submit');
     onClickSpy.calledOnce.should.be.false;
   });
 

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
+import {findDOMNode} from 'react-dom';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import { addTodo } from '../actions/todoActions';
 
 export let AddTodo = ({ dispatch }) => {
@@ -8,17 +9,19 @@ export let AddTodo = ({ dispatch }) => {
 
   return (
     <div>
-      <form onSubmit={e => {
+      <Form inline onSubmit={e => {
         if (e) e.preventDefault();
         if (!input.value.trim()) return;
         dispatch(addTodo(input.value));
         input.value = '';
       }}>
-        <input ref={node => {
-          input = node;
-        }} />
-        <Button type="submit" bsStyle="primary" bsSize="small">Add Todo</Button>
-      </form>
+        <FormGroup controlId="formInlineName">
+          <FormControl type="text" placeholder="new todo" ref={node => {
+            input = findDOMNode(node);
+          }}/>
+        </FormGroup>
+        <Button type="submit" bsStyle="primary" pullRight={true} bsSize="small">Add Todo</Button>
+      </Form>
     </div>
   );
 };

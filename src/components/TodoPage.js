@@ -10,7 +10,9 @@ const TodoPage = () => (
   <div>
     <AddTodo />
     <VisibleTodoList />
-    <TodoSelector />
+    <div class="todoSelectorWrapper">
+      <TodoSelector />
+    </div>
   </div>
 );
 
