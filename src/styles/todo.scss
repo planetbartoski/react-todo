@@ -6,7 +6,7 @@
   Form {
     .form-group{
       overflow: hidden;
-      margin-bottom: 15px;
+      margin-bottom: 0px;
       display: block;
 
       input {
@@ -24,7 +24,7 @@
   }
 
   .todoList {
-    margin: 10px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
     padding-left: 20px;
 
     li {
