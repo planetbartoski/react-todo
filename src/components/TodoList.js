@@ -5,7 +5,7 @@ import Todo from './Todo';
  * List of the Todo items
  */
 const TodoList = ({ todos, onTodoClick }) => (
-  <ul>
+  <ul className="todoList">
     {todos.map(todo =>
       <Todo
         key={todo.id}

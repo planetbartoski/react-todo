@@ -7,7 +7,7 @@ const App = (props) => (
   <Grid fluid={true}>
     <Row>
       <Col>
-        <Navbar>
+        <Navbar toggleNavKey={1}>
           <Navbar.Header>
             <Navbar.Brand>
               <IndexLink to="/">ToDo</IndexLink>
