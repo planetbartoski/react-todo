@@ -1,26 +1,12 @@
 import React, { PropTypes } from 'react';
-import { IndexLink } from 'react-router';
-import { Navbar, Nav, NavItem, Grid, Row, Col } from 'react-bootstrap';
-import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
+import Header from './Header';
 
 const App = (props) => (
   <Grid fluid={true}>
     <Row>
       <Col>
-        <Navbar toggleNavKey={1}>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <IndexLink to="/">ToDo</IndexLink>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <IndexLinkContainer to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
-              <LinkContainer to="/About"><NavItem eventKey={2}>About</NavItem></LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <Header />
       </Col>
     </Row>
     <Row>
