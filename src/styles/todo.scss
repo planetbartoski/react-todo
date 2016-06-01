@@ -1,0 +1,34 @@
+.todoPage {
+	.todoSelectorWrapper {
+    text-align: center;
+  }
+
+  Form {
+    .form-group{
+      overflow: hidden;
+      margin-bottom: 15px;
+      display: block;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    Button {
+      float: right;
+      margin-left: 10px;
+      margin-top: 1px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+
+  .todoList {
+    margin: 10px 0px 20px 0px;
+    padding-left: 20px;
+
+    li {
+      margin: 5px 0px;
+    }
+  }
+}
