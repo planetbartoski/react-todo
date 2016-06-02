@@ -4,6 +4,14 @@ import { connect } from 'react-redux';
 import { Form, FormGroup, FormControl, Clearfix, Button } from 'react-bootstrap';
 import { addTodo } from '../actions/todoActions';
 
+/**
+ * The Add Todo Container
+ *
+ * Renders the Add Todo Form.
+ * @param {Function} dispatch - dispatch function
+ *
+ * Exported to allow testing
+ */
 export let AddTodo = ({ dispatch }) => {
   let input = {value:''};
 
@@ -27,6 +35,9 @@ export let AddTodo = ({ dispatch }) => {
   );
 };
 
+/**
+ * Prop Types
+ */
 AddTodo.propTypes = {
   dispatch: PropTypes.func.isRequired
 };
