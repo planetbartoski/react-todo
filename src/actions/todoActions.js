@@ -8,7 +8,7 @@ let nextTodoId = 0;
 /**
  * Creates addTodo action 
  *
- * @param {String} text - text of the new todo item
+ * @param {string} text - text of the new todo item
  */
 export function addTodo(text) {
   return { 
@@ -21,7 +21,7 @@ export function addTodo(text) {
 /**
  * Creates toggleTodo action 
  *
- * @param {Number} id - id of the item to be toggled
+ * @param {number} id - id of the item to be toggled
  */
 export function toggleTodo(id) {
   return { 

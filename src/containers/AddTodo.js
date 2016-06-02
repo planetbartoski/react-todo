@@ -8,7 +8,7 @@ import { addTodo } from '../actions/todoActions';
  * The Add Todo Container
  *
  * Renders the Add Todo Form.
- * @param {Function} dispatch - dispatch function
+ * @param {function} dispatch - dispatch function
  *
  * Exported to allow testing
  */

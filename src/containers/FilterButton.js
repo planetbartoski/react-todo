@@ -6,8 +6,8 @@ import { Button } from 'react-bootstrap';
  * mapStateToProps
  *
  * Transforms current state into props
- * @param {Object} state - current state
- * @param {Object} ownProps - own props
+ * @param {object} state - current state
+ * @param {object} ownProps - own props
  *
  * Exported to allow testing
  */
@@ -21,8 +21,8 @@ export function mapStateToProps(state, ownProps) {
  * mapStateToProps
  *
  * Transforms dispatch function into callback props
- * @param {Function} dispatch - dispatch function
- * @param {Object} ownProps - own props
+ * @param {function} dispatch - dispatch function
+ * @param {object} ownProps - own props
  *
  * Exported to allow testing
  */

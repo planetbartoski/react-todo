@@ -6,7 +6,7 @@ import Header from './Header';
  *
  * Renders the App: Header and Content
  *
- * @param {Object} props - properties
+ * @param {object} props - properties
  */
 const App = (props) => (
   <div className="appWrapper">

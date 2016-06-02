@@ -8,7 +8,7 @@ import VisibilityFilter from '../constants/VisibilityFilter';
  *
  * @param {array} todos - array of todo items
  * @param {VisibilityFilter} filter - todos filter
- * @return {array} - filtered array of todo items
+ * @returns {array} - filtered array of todo items
  */
 function getVisibleTodos(todos, filter) {
   switch (filter) {
@@ -25,7 +25,7 @@ function getVisibleTodos(todos, filter) {
  * mapStateToProps
  *
  * Transforms current state into props
- * @param {Object} state - current state
+ * @param {object} state - current state
  *
  * Exported to allow testing
  */
