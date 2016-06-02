@@ -1,9 +1,10 @@
-/**
- * Base Component extends React Component, adds helpers
- */
-
 import { Component } from 'react';
 
+/**
+ * Base Component
+ * 
+ * Extends React Component, adds helpers
+ */
 export default class BaseComponent extends Component {
 
   /**

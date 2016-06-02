@@ -1,3 +1,8 @@
+/**
+ * Instantiate document
+ *
+ * Necessery when using enzyme.mount in tests
+ */
 import { jsdom } from 'jsdom';
 
 const exposedProperties = ['window', 'navigator', 'document'];
