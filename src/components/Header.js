@@ -3,16 +3,11 @@ import { IndexLink } from 'react-router';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 
-/**
- * Header, includes Bootstrap Navbar
- * 
- * Special workaround added to close bootstrap nav once an
- * item has been selected, uses this.state.navExpanded 
- */
 class Header extends React.Component {  
   constructor(props, context) {
     super(props, context);
 
+    // methods bindings
     this.onNavItemClick = this.onNavItemClick.bind(this);
     this.onNavbarToggle = this.onNavbarToggle.bind(this);
 
