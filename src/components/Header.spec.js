@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import { should } from 'chai'; should();
 import Header from './Header';
 
-
 describe('<Header />', function() {
 
   it('Header should exist', function() {
