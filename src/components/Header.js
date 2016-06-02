@@ -1,15 +1,15 @@
 import React from 'react';
+import BaseComponent from '../tools/BaseComponent';
 import { IndexLink } from 'react-router';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 
-class Header extends React.Component {  
+class Header extends BaseComponent {  
   constructor(props, context) {
     super(props, context);
 
-    // methods bindings
-    this.onNavItemClick = this.onNavItemClick.bind(this);
-    this.onNavbarToggle = this.onNavbarToggle.bind(this);
+    // bind class methods
+    this._bind('onNavItemClick', 'onNavbarToggle');
 
     this.state = {
       /** menu close/open indicator */
