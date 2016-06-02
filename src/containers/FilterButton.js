@@ -11,11 +11,11 @@ import { Button } from 'react-bootstrap';
  *
  * Exported to allow testing
  */
-export const mapStateToProps = (state, ownProps) => {
+export function mapStateToProps(state, ownProps) {
   return {
     disabled: ownProps.filter === state.visibilityFilter
   };
-};
+}
 
 /**
  * mapStateToProps
@@ -26,14 +26,17 @@ export const mapStateToProps = (state, ownProps) => {
  *
  * Exported to allow testing
  */
-export const mapDispatchToProps = (dispatch, ownProps) => {
+export function mapDispatchToProps(dispatch, ownProps) {
   return {
     onClick: () => {
       dispatch(setVisibilityFilter(ownProps.filter));
     }
   };
-};
+}
 
+/**
+ * Export connected Component
+ */
 export default connect(
   mapStateToProps,
   mapDispatchToProps

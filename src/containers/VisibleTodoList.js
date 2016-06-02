@@ -51,6 +51,9 @@ export function mapDispatchToProps(dispatch) {
   };
 }
 
+/**
+ * Export connected Component
+ */
 export default connect(
   mapStateToProps,
   mapDispatchToProps
