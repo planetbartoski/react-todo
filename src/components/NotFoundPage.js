@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+/**
+ * Page Not Found, pure 
+ */
 const NotFoundPage = () => {
   return (
     <div>

@@ -1,22 +1,25 @@
 import React, { PropTypes } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
 import Header from './Header';
 
+/**
+ * The App Component, pure
+ *
+ * Renders the App: Header and Content
+ *
+ * @param {Object} props - properties
+ */
 const App = (props) => (
-  <Grid fluid={true}>
-    <Row>
-      <Col>
-        <Header />
-      </Col>
-    </Row>
-    <Row>
-      <Col xs={10} xsOffset={1}>
-        {props.children}
-      </Col>
-    </Row>
-  </Grid>
+  <div className="appWrapper">
+    <Header />
+    <div className="contentWrapper">
+      {props.children}
+    </div>
+  </div>
 );
 
+/**
+ * Prop Types
+ */
 App.propTypes = {
   children: PropTypes.element
 };

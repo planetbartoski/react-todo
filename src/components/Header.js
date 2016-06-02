@@ -4,6 +4,11 @@ import { IndexLink } from 'react-router';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 
+/**
+ * Header Component 
+ *
+ * React-Boostrap header with the Navbar
+ */
 class Header extends BaseComponent {  
   constructor(props, context) {
     super(props, context);

@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router';
-import '../styles/about-page.css';
+import '../styles/aboutPage.css';
 
-// Since this component is simple and static, there's no parent container for it.
+/**
+ * About Page Component, pure
+ *
+ * Renders basic About Page 
+ */
 const AboutPage = () => {
   return (
-    <div>
+    <div className="aboutPage">
       <h2 className="alt-header">About</h2>
-      <p>About Page</p>
+      <p>Todo App</p>
       <p>
         <Link to="/badlink">Click this bad link</Link> to see the 404 page.
       </p>
