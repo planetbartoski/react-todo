@@ -1,8 +1,7 @@
+/**
+ * Todo Page styles
+ */
 .todoPage {
-	.todoSelectorWrapper {
-    text-align: center;
-  }
-
   Form {
     .form-group{
       overflow: hidden;
@@ -30,5 +29,9 @@
     li {
       margin: 5px 0px;
     }
+  }
+
+  .todoSelectorWrapper {
+    text-align: center;
   }
 }

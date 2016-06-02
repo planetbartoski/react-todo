@@ -1,0 +1,10 @@
+/**
+ * About Page styles
+ */
+.aboutPage {
+  margin: 0px 30px;
+
+  .alt-header {
+    color: green;
+  }  
+}
