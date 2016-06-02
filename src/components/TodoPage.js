@@ -5,15 +5,15 @@ import TodoSelector from './TodoSelector';
 import '../styles/todoPage.scss';
 
 /**
- * TodoPage Component, renders the Todo app on the screen 
+ * TodoPage Component
+ * 
+ * renders the AddTodo, VisibleTodoList and TodoSelector
  */
 const TodoPage = () => (
   <div className="todoPage">
     <AddTodo />
     <VisibleTodoList />
-    <div className="todoSelectorWrapper">
-      <TodoSelector />
-    </div>
+    <TodoSelector />
   </div>
 );
 

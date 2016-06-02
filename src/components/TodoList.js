@@ -2,7 +2,12 @@ import React, { PropTypes } from 'react';
 import Todo from './Todo';
 
 /**
- * List of the Todo items
+ * Todo List Component
+ *
+ * list of todos
+ * @param {array} todos - array of todo items
+ * @param {function} onTodoClick - called when user clicks 
+ *  one of the todo item
  */
 const TodoList = ({ todos, onTodoClick }) => (
   <ul className="todoList">
@@ -16,6 +21,9 @@ const TodoList = ({ todos, onTodoClick }) => (
   </ul>
 );
 
+/**
+ * Prop Types
+ */
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,

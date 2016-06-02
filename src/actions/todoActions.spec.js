@@ -1,4 +1,3 @@
-//import React from 'react';
 import { should } from 'chai'; should();
 import * as ActionCreators from './todoActions';
 import * as ActionTypes from '../constants/actionTypes';
