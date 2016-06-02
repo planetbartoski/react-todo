@@ -3,6 +3,12 @@ import { IndexLink } from 'react-router';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 
+/**
+ * Header, includes Bootstrap Navbar
+ * 
+ * Special workaround added to close bootstrap nav once an
+ * item has been selected, uses this.state.navExpanded 
+ */
 class Header extends React.Component {  
   constructor(props, context) {
     super(props, context);
@@ -11,18 +17,24 @@ class Header extends React.Component {
     this.onNavbarToggle = this.onNavbarToggle.bind(this);
 
     this.state = {
+      /** menu close/open indicator */
       navExpanded: false
-    }; 
+    };
   }
 
+  /**
+   * Called everytime menu item selected. Closes the menu 
+   */
   onNavItemClick() {
     this.setState({ navExpanded: false });
   }
 
+  /**
+   * Called when menu toggled, syncs menu state with component state
+   */
   onNavbarToggle() {
     this.setState({ navExpanded: ! this.state.navExpanded });
   }
-
 
   render() {
     return (

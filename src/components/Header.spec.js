@@ -6,7 +6,7 @@ import Header from './Header';
 
 describe('<Header />', function() {
 
-  it('Header hould exist', function() {
+  it('Header should exist', function() {
     const wrapper = shallow(<Header/>);
     wrapper.should.exist;
   });
