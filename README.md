@@ -4,6 +4,8 @@ Learning React and Redux
 
 Todo App, React Slingshot used as a starter kit: https://github.com/coryhouse/react-slingshot
 
+Bootstrap in use. Sadly it is very heavy, I don't think I will use it again
+
 ## Get Started
 1. **Initial Machine Setup**. Complete the [Initial Machine Setup](https://github.com/coryhouse/react-slingshot#initial-machine-setup).
 2. **Clone the project**. `git clone https://github.com/coryhouse/react-slingshot.git`.  
