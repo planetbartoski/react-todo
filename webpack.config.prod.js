@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const GLOBALS = {
@@ -27,7 +26,7 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
+      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
       {test: /\.eot(\?v=\d+.\d+.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'file-loader?prefix=font/&limit=5000'},
       {test: /\.ttf(\?v=\d+.\d+.\d+)?$/, loader: 'file-loader?limit=10000&mimetype=application/octet-stream'},
@@ -36,7 +35,7 @@ export default {
       {test: /\.ico$/, loader: 'file-loader?name=[name].[ext]'},
       {
         test: /(\.css|\.scss)$/,
-        include: path.join(__dirname, 'src'),
+        exclude: /node_modules/,
         loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')
       }
     ]
