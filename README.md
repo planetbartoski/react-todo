@@ -10,7 +10,8 @@ Bootstrap in use. Sadly it is very heavy, I don't think I will use it again
 1. **Initial Machine Setup**. Complete the [Initial Machine Setup](https://github.com/coryhouse/react-slingshot#initial-machine-setup).
 2. **Clone the project**. `git clone https://github.com/coryhouse/react-slingshot.git`.  
 3. **Install Node packages**. `npm install`
-4. **Run the app**. `npm start -s`
+4. **Run the app**. `npm start`
+5. **Build the app into the /dist folder**. `npm run build`
 
 ##Initial Machine Setup
 1. **Install [Node 4.0.0 or greater](https://nodejs.org)** - (5.0 or greater is recommended for optimal build performance). Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm).
